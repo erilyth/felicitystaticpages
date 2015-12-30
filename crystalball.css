@@ -44,7 +44,7 @@
 .cic{
   display: block;
   position: absolute;
-  height: 2vh;
-  left: calc( 50vw - 1vh);
+  height: 4vh;
+  left: calc( 50vw - 2vh);
   top: 98%;
 }
