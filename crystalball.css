@@ -40,3 +40,11 @@
   }
 
 }
+
+.cic{
+  display: block;
+  position: absolute;
+  height: 2vh;
+  left: calc( 50vw - 1vh);
+  top: 98%;
+}
