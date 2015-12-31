@@ -4,7 +4,7 @@
  *
  * Distributed under terms of the MIT license.
  */
-var imgs=$('.crystal_ball');
+var imgs=$('.crystal_icon');
 console.log(imgs.size());
 var angle=200/imgs.size();
 var cur_angle=(200 - angle*(imgs.size()-1))/2 - 10;
