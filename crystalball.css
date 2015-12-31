@@ -1,27 +1,36 @@
 .bulb {
-  display: block;
-  position: absolute;
-  height: 20vh;
+  height: 25vh;
   width: 25vh;
-  left: calc( 50vw - 12.5vh );
-  top: 80%;
+  left: 10vh;
+  margin-left: 7vh;
+  margin-top: 7vh;
   background-color: rgba(255, 255, 255, .9);
-  border-radius: 90px 90px 50px 50px;
+  border-radius: 90px 90px 90px 90px;
   -webkit-animation: glow 2s infinite linear;
   animation: glow 2s infinite linear;
 }
 
+.bulbcontainer {
+  display: block;
+  position: absolute;
+  height: 27vh;
+  width: 40vh;
+  left: calc( 50vw - 19.5vh );
+  top: 73%;
+  overflow: hidden;
+}
+
 @keyframes glow {
   from {
-    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 11px #fff, 0 0 14px #fff;
+    box-shadow: 0 0 1vh #fff, 0 0 2vh #fff, 0 0 3vh #fff, 0 0 4vh #fff;
   }
 
   50% {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+    box-shadow: 0 0 2vh #fff, 0 0 4vh #fff, 0 0 6vh #fff, 0 0 8vh #fff;
   }
 
   to {
-    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 11px #fff, 0 0 14px #fff;
+    box-shadow: 0 0 1vh #fff, 0 0 2vh #fff, 0 0 3vh #fff, 0 0 4vh #fff;
   }
 }
 
