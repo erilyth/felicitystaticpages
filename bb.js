@@ -6,8 +6,8 @@
  */
 var imgs=$('.crystal_ball');
 console.log(imgs.size());
-var angle=180/imgs.size();
-var cur_angle=(180 - angle*(imgs.size()-1))/2;
+var angle=220/imgs.size();
+var cur_angle=(220 - angle*(imgs.size()-1))/2;
 imgs.each(function(){
 	console.log(angle);
 	var cur_str = 'rotate(-' + cur_angle + 'deg) translate(16vh) rotate(' + cur_angle + 'deg)';
