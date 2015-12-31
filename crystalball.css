@@ -22,15 +22,15 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 1vh #fff, 0 0 2vh #fff, 0 0 3vh #fff, 0 0 4vh #fff;
+    box-shadow: 0 0 3vh #fff, 0 0 4vh #fff, 0 0 5vh #fff, 0 0 6vh #fff;
   }
 
   50% {
-    box-shadow: 0 0 2vh #fff, 0 0 4vh #fff, 0 0 6vh #fff, 0 0 8vh #fff;
+    box-shadow: 0 0 4vh #fff, 0 0 5vh #fff, 0 0 6vh #fff, 0 0 8vh #fff;
   }
 
   to {
-    box-shadow: 0 0 1vh #fff, 0 0 2vh #fff, 0 0 3vh #fff, 0 0 4vh #fff;
+    box-shadow: 0 0 3vh #fff, 0 0 4vh #fff, 0 0 5vh #fff, 0 0 6vh #fff;
   }
 }
 
@@ -40,4 +40,22 @@
   height: 4vh;
   left: calc( 50vw - 2vh);
   top: 90%;
+}
+
+.crystal_gif{
+	display:block;
+	position:absolute;
+	height:4em;
+	left: calc(50vw - 2em);
+	top: 85%;
+}
+
+.events{
+	display:block;
+	position:absolute;
+	font-size:200%;
+	left: calc( 50vw - 2em);
+	color:#F9F9F8;
+	top: 88%;
+	text-shadow: 0px 0px 4px #000;
 }
