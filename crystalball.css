@@ -1,12 +1,12 @@
 .bulb {
   display: block;
   position: absolute;
-  height: 15vh;
-  width: 30vh;
-  left: calc( 50vw - 15vh );
-  top: 85%;
+  height: 20vh;
+  width: 25vh;
+  left: calc( 50vw - 12.5vh );
+  top: 80%;
   background-color: rgba(255, 255, 255, .9);
-  border-radius: 50% 50% 0 0/ 100% 100% 0px 0px;
+  border-radius: 90px 90px 50px 50px;
   -webkit-animation: glow 2s infinite linear;
   animation: glow 2s infinite linear;
 }
@@ -45,5 +45,5 @@
   position: absolute;
   height: 4vh;
   left: calc( 50vw - 2vh);
-  top: 98%;
+  top: 90%;
 }
