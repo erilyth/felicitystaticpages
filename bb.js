@@ -10,7 +10,7 @@ var angle=180/imgs.size();
 var cur_angle=(180 - angle*(imgs.size()-1))/2;
 imgs.each(function(){
 	console.log(angle);
-	var cur_str = 'rotate(-' + cur_angle + 'deg) translate(20vh) rotate(' + cur_angle + 'deg)';
+	var cur_str = 'rotate(-' + cur_angle + 'deg) translate(16vh) rotate(' + cur_angle + 'deg)';
 	$(this).css({
 		'transform':cur_str
 	});
