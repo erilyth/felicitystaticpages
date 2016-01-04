@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <!--link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" -->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script>
+$("#testText").hover(
+        function(e){
+        $("#tooltip").slideDown("slow");
+        console.log("hello");
+        },
+        function(e){
+        $("#tooltip").slideUp("slow");
+        })
+        </script>
+        <style>
+#tooltip {
+    display: none;
+    font-size: 22px;
+    color: #C00;
+    z-index: 10000;
+    border:10px white;
+}
+        </style>
+    </head>
+    <body>
+        <p id="testText">Some Text</p>
+        <div id="tooltip">Tooltip Hint Text</div>
+    </body>
+</html>
