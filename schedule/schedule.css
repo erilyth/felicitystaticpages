@@ -1,0 +1,23 @@
+/*
+ * schedule.css
+ * Copyright (C) 2016 vishalapr
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+body {
+	background: white;
+	color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px;
+}
+
+td.borderRight {
+    border-right: thick solid #ff0000;
+}
