@@ -1,85 +1,245 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <head>
         <meta charset="utf-8" />
-		<title>schedule</title>
+        <title>schedule</title>
         <link rel="stylesheet" href="schedule.css" type="text/css">
-	</head>
-	<body>
-        <table border="solid" width="100%">
+    </head>
+    <body>
+        <table width="100%">
             <tr>
-                <td width="50%">
+                <td width="50%" valign="top">
+                    <div style="position:fixed; margin-left:10%; margin-top:0vh;" id="calendar1" class="latofont">
+                        <h3>January</h3>
+                        <table class="calendarCur">
+                            <tr>
+                                <td class="cat5 enlarge" onmouseover="hoverDate('Test 1',this)" onmouseout="hoverOutDate('1', this)">1</td>
+                                <td class="cat4 enlarge" onmouseover="hoverDate('Test 2',this)" onmouseout="hoverOutDate('2', this)">2</td>
+                                <td class="cat2 enlarge" onmouseover="hoverDate('Test 3',this)" onmouseout="hoverOutDate('3', this)">3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td class="cat4 enlarge" onmouseover="hoverDate('Test 6',this)" onmouseout="hoverOutDate('6', this)">6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="cat2 enlarge" onmouseover="hoverDate('Test 8',this)" onmouseout="hoverOutDate('8', this)">8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td class="cat4 enlarge" onmouseover="hoverDate('Test 19',this)" onmouseout="hoverOutDate('19', this)">19</td>
+                                <td>20</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td class="cat4 enlarge" onmouseover="hoverDate('Test 26',this)" onmouseout="hoverOutDate('26', this)">26</td>
+                                <td>27</td>
+                                <td class="cat5 enlarge" onmouseover="hoverDate('Test 28',this)" onmouseout="hoverOutDate('28', this)">28</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td class="cat1 enlarge" onmouseover="hoverDate('Test 23',this)" onmouseout="hoverOutDate('23', this)">23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td class="cat4 enlarge" onmouseover="hoverDate('Test 28',this)" onmouseout="hoverOutDate('28', this)">28</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="position:fixed; margin-left:10%; margin-top:46vh;" id="calendar2" class="latofont">
+                        <h3>March</h3>
+                        <table class="calendarAlt">
+                            <tr>
+                                <td>1</td>
+                                <td class="cat4 enlarge" onmouseover="hoverDate('Test 2',this)" onmouseout="hoverOutDate('2', this)">2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td class="cat1 enlarge" onmouseover="hoverDate('Test 7',this)" onmouseout="hoverOutDate('7', this)">7</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td class="cat2 enlarge" onmouseover="hoverDate('Test 8',this)" onmouseout="hoverOutDate('8', this)">9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td class="cat4 enlarge" onmouseover="hoverDate('Test 16',this)" onmouseout="hoverOutDate('16', this)">16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td class="cat1 enlarge" onmouseover="hoverDate('Test 19',this)" onmouseout="hoverOutDate('19', this)">19</td>
+                                <td>20</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>23</td>
+                                <td class="cat2 enlarge" onmouseover="hoverDate('Test 24',this)" onmouseout="hoverOutDate('24', this)">24</td>
+                                <td class="cat2 enlarge" onmouseover="hoverDate('Test 25',this)" onmouseout="hoverOutDate('25', this)">25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td class="cat3 enlarge" onmouseover="hoverDate('Test 22',this)" onmouseout="hoverOutDate('22', this)">22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td class="cat1 enlarge" onmouseover="hoverDate('Test 25',this)" onmouseout="hoverOutDate('25', this)">25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td class="cat2 enlarge" onmouseover="hoverDate('Test 28',this)" onmouseout="hoverOutDate('28', this)">28</td>
+                            </tr>
+                        </table>
+                    </div>
                 </td>
                 <td>
                     <table style="margin:0 auto;">
                         <tr class="timeline">
-                            <td class="category1 borderRight"><div class="daytime">Monday</div></td>
+                            <td class="category1 borderRight">
+                                <div class="daytime">Monday</div>
+                            </td>
                             <td>
-				<div>
-				<div class="circle">
-					<div class="inner-circle cat1"></div>
-				</div>
-				<div class="ev ev-cat1">
-					<span>Hi Tokka totakura katta</span><br>
-				</div>
-				</div>
-			    </td>
+                                <div>
+                                    <div class="circle">
+                                        <div class="inner-circle cat1"></div>
+                                    </div>
+                                    <div class="ev ev-cat1">
+                                        <span>Hi Tokka totakura katta</span><br>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr class="timeline">
-                            <td class="category2 borderRight"><div class="daytime">Tuesday</div></td>
+                            <td class="category2 borderRight">
+                                <div class="daytime">Tuesday</div>
+                            </td>
                             <td>
-				<div>
-				<div class="circle">
-					<div class="inner-circle cat2"></div>
-				</div>
-				<div class="ev ev-cat2">
-					<span>Hi Tokka totakura katta</span>
-				</div>
-				</div>
-			    </td>
+                                <div>
+                                    <div class="circle">
+                                        <div class="inner-circle cat2"></div>
+                                    </div>
+                                    <div class="ev ev-cat2">
+                                        <span>Hi Tokka totakura katta</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr class="timeline">
-                            <td class="category3 borderRight"><div class="daytime">Wednesday</div></td>
+                            <td class="category3 borderRight">
+                                <div class="daytime">Wednesday</div>
+                            </td>
                             <td>
-				<div>
-				<div class="circle">
-					<div class="inner-circle cat3"></div>
-				</div>
-				<div class="ev ev-cat3">
-					<span>Hi Tokka totakura katta</span>
-				</div>
-				</div>
-			    </td>
+                                <div>
+                                    <div class="circle">
+                                        <div class="inner-circle cat3"></div>
+                                    </div>
+                                    <div class="ev ev-cat3">
+                                        <span>Hi Tokka totakura katta</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr class="timeline">
-                            <td class="category3 borderRight"><div class="daytime">Thursday</div></td>
+                            <td class="category3 borderRight">
+                                <div class="daytime">Thursday</div>
+                            </td>
                             <td>
-				<div>
-				<div class="circle">
-					<div class="inner-circle cat3"></div>
-				</div>
-				<div class="ev ev-cat3">
-					<span>Hi Tokka totakura katta</span>
-				</div>
-				</div>
-			    </td>
+                                <div>
+                                    <div class="circle">
+                                        <div class="inner-circle cat3"></div>
+                                    </div>
+                                    <div class="ev ev-cat3">
+                                        <span>Hi Tokka totakura katta</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr class="timeline">
-                            <td class="category4 borderRight"><div class="daytime">Friday</div></td>
+                            <td class="category4 borderRight">
+                                <div class="daytime">Friday</div>
+                            </td>
                             <td>
-				<div>
-				<div class="circle">
-					<div class="inner-circle cat4"></div>
-				</div>
-				<div class="ev ev-cat4">
-					<span>Hi Tokka totakura katta</span>
-				</div>
-				</div>
-			    </td>
+                                <div>
+                                    <div class="circle">
+                                        <div class="inner-circle cat4"></div>
+                                    </div>
+                                    <div class="ev ev-cat4">
+                                        <span>Hi Tokka totakura katta</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="timeline">
+                            <td class="category4 borderRight">
+                                <div class="daytime">Friday</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="circle">
+                                        <div class="inner-circle cat4"></div>
+                                    </div>
+                                    <div class="ev ev-cat4">
+                                        <span>Hi Tokka totakura katta</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="timeline">
+                            <td class="category3 borderRight">
+                                <div class="daytime">Thursday</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="circle">
+                                        <div class="inner-circle cat3"></div>
+                                    </div>
+                                    <div class="ev ev-cat3">
+                                        <span>Hi Tokka totakura katta</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="timeline">
+                            <td class="category3 borderRight">
+                                <div class="daytime">Thursday</div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="circle">
+                                        <div class="inner-circle cat3"></div>
+                                    </div>
+                                    <div class="ev ev-cat3">
+                                        <span>Hi Tokka totakura katta</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </table>
                 </td>
             </tr>
         </table>
-	</body>
+        <script type="text/javascript" src="schedule.js"></script>
+    </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 0e838d38c3d2a15de44426a9970e45b9b5c8cef9
