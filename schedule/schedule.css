@@ -1,3 +1,5 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
 body {
 	background: white;
 	color: black;
@@ -12,7 +14,7 @@ table {
     margin-top: -0.7em;
 }
 
-td {
+tr.timeline td {
     padding: 5vh;
 }
 
@@ -81,7 +83,7 @@ tr.timeline:hover .category5 {
 .circle {
 	border: solid;
 	display : inline-block;
-	margin-left: -2.85em;
+	margin-left: -2.7em;
 	border-radius: 10em;
 	height: 1em;
 	width: 1em;
@@ -149,4 +151,3 @@ tr.timeline:hover .cat4 {
 tr.timeline:hover .cat5 {
 	background-color: #E5EB3D;
 }
-
