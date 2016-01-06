@@ -154,6 +154,7 @@ tr.timeline:hover .cat5 {
 
 table.calendarCur td.enlarge:hover, table.calendarAlt td.enlarge:hover  {
     animation-name: zoomin;
+    z-index: 2;
     font-size: 0.5em;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
@@ -161,6 +162,7 @@ table.calendarCur td.enlarge:hover, table.calendarAlt td.enlarge:hover  {
 
 table.calendarCur td.enlarge, table.calendarAlt td.enlarge {
     font-size: 1em;
+    z-index: 1;
     animation-name: zoomout;
     animation-duration: 0.3s;
 }
