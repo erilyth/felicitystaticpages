@@ -153,7 +153,7 @@ tr.timeline:hover .cat5 {
 }
 
 table.calendarCur td.enlarge:hover, table.calendarAlt td.enlarge:hover  {
-    animation-name: flipin;
+    animation-name: zoomin;
     font-size: 0.5em;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
@@ -161,16 +161,16 @@ table.calendarCur td.enlarge:hover, table.calendarAlt td.enlarge:hover  {
 
 table.calendarCur td.enlarge, table.calendarAlt td.enlarge {
     font-size: 1em;
-    animation-name: flipout;
+    animation-name: zoomout;
     animation-duration: 0.3s;
 }
 
-@keyframes flipin {
+@keyframes zoomin {
     0% {}
     100% {transform: scale(2, 2)}
 }
 
-@keyframes flipout {
+@keyframes zoomout {
     0% {transform: scale(2, 2)}
     100% {transform: scale(1, 1)}
 }
