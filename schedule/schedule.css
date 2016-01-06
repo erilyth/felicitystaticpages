@@ -11,7 +11,10 @@ table {
     margin-top: -0.7em;
 }
 tr.timeline td {
-    padding: 5vh;
+    padding-left: 2em;
+    padding-top: 1.5em;
+    padding-right: 1.2em;
+    padding-bottom:0.8em;
 }
 td.borderRight {
     border-right: thick solid #9C9C9C;
@@ -19,10 +22,10 @@ td.borderRight {
     width: 50%;
     font-family: monaco, Consolas, Lucida Console, monospace;
     color: #4A4A4A;
-    font-size: 25px;
+    font-size: 2em;
     font-weight: bold;
     font-variant: normal;
-    line-height: 20px;
+    line-height: 2em;
 }
 .category1 {
     opacity: 0.5;
@@ -41,33 +44,33 @@ td.borderRight {
 }
 tr.timeline:hover .category1 {
     opacity: 1;
-    font-size: 28px;
+    font-size: 2.5em;
     color: #3C93B0;
 }
 tr.timeline:hover .category2 {
     opacity: 1;
-    font-size: 28px;
+    font-size: 2.5em;
     color: #833CB0;
 }
 tr.timeline:hover .category3 {
     opacity: 1;
-    font-size: 28px;
+    font-size: 2.5em;
     color: #C92639;
 }
 tr.timeline:hover .category4 {
     opacity: 1;
-    font-size: 28px;
+    font-size: 2.5em;
     color: #32BF36;
 }
 tr.timeline:hover .category5 {
     opacity: 1;
-    font-size: 28px;
+    font-size: 2.5em;
     color: #E5EB3D;
 }
 .circle {
     border: solid;
     display: inline-block;
-    margin-left: -2.9em;
+    margin-left: -2.8em;
     border-radius: 10em;
     height: 1em;
     width: 1em;
@@ -169,13 +172,13 @@ div.latofont {
     font: 300 100%/1.5em 'Lato', sans-serif;
 }
 table.calendarCur td {
-    padding: 2vh;
+    padding: 0.9em;
     border-radius: 50%;
     text-align: center;
     font: 300 100%/1.2em 'Lato', sans-serif;
 }
 table.calendarAlt td {
-    padding: 2vh;
+    padding: 0.9em;
     border-radius: 50%;
     text-align: center;
     font: 300 100%/1.2em 'Lato', sans-serif;
