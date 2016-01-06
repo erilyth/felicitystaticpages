@@ -1,254 +1,228 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
 body {
-	background: white;
-	color: black;
+    background: white;
+    color: black;
 }
-
 table {
     border-collapse: collapse;
 }
-
 .daytime {
     vertical-align: top;
     margin-top: -0.7em;
 }
-
 tr.timeline td {
     padding: 5vh;
 }
-
 td.borderRight {
     border-right: thick solid #9C9C9C;
     text-align: right;
     width: 50%;
-    font-family: monaco,Consolas,Lucida Console,monospace;
+    font-family: monaco, Consolas, Lucida Console, monospace;
     color: #4A4A4A;
     font-size: 25px;
     font-weight: bold;
     font-variant: normal;
     line-height: 20px;
 }
-
 .category1 {
     opacity: 0.5;
 }
-
 .category2 {
     opacity: 0.5;
 }
-
 .category3 {
     opacity: 0.5;
 }
-
 .category4 {
     opacity: 0.5;
 }
-
 .category5 {
     opacity: 0.5;
 }
-
 tr.timeline:hover .category1 {
     opacity: 1;
     font-size: 28px;
     color: #3C93B0;
 }
-
 tr.timeline:hover .category2 {
     opacity: 1;
     font-size: 28px;
     color: #833CB0;
 }
-
 tr.timeline:hover .category3 {
     opacity: 1;
     font-size: 28px;
     color: #C92639;
 }
-
 tr.timeline:hover .category4 {
     opacity: 1;
     font-size: 28px;
     color: #32BF36;
 }
-
 tr.timeline:hover .category5 {
     opacity: 1;
     font-size: 28px;
     color: #E5EB3D;
 }
-
 .circle {
-	border: solid;
-	display : inline-block;
-	margin-left: -2.7em;
-	border-radius: 10em;
-	height: 1em;
-	width: 1em;
-	background-color: white;
-	vertical-align: top;
-	margin-top: 0.5em;
+    border: solid;
+    display: inline-block;
+    margin-left: -2.7em;
+    border-radius: 10em;
+    height: 1em;
+    width: 1em;
+    background-color: white;
+    vertical-align: top;
+    margin-top: 0.5em;
 }
-
 .ev {
-	display : inline-block;
-	margin-left: 1em;
-	padding: 0.5em;
-	border-radius: 1em;
-	vertical-align: top;
-        background-color: #BBBBBB;
-        opacity: 0.5;
+    display: inline-block;
+    margin-left: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
+    vertical-align: top;
+    background-color: #BBBBBB;
+    opacity: 0.5;
 }
-
 tr.timeline:hover .ev {
-	color: #FFFFFF;
+    color: #FFFFFF;
 }
-
 tr.timeline:hover .ev-cat1 {
-	background-color: #3C93B0;
-        opacity: 1;
+    background-color: #3C93B0;
+    opacity: 1;
 }
 tr.timeline:hover .ev-cat2 {
-	background-color: #833CB0;
-        opacity: 1;
+    background-color: #833CB0;
+    opacity: 1;
 }
 tr.timeline:hover .ev-cat3 {
-	background-color: #C92639;
-        opacity: 1;
+    background-color: #C92639;
+    opacity: 1;
 }
 tr.timeline:hover .ev-cat4 {
-	background-color: #32BF36;
-        opacity: 1;
+    background-color: #32BF36;
+    opacity: 1;
 }
 tr.timeline:hover .ev-cat5 {
-	background-color: #E5EB3D;
-        opacity: 1;
+    background-color: #E5EB3D;
+    opacity: 1;
 }
 .inner-circle {
-	display: inline-block;
-	height: 0.5em;
-	width: 0.5em;
-	background-color: white;
-	margin-left: 0.25em;
-	margin-bottom: 0.18em;
-	border-radius: 10em;
+    display: inline-block;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: white;
+    margin-left: 0.25em;
+    margin-bottom: 0.18em;
+    border-radius: 10em;
 }
-
 tr.timeline:hover .cat1 {
-	background-color: #3C93B0;
+    background-color: #3C93B0;
 }
 tr.timeline:hover .cat2 {
-	background-color: #833CB0;
+    background-color: #833CB0;
 }
 tr.timeline:hover .cat3 {
-	background-color: #C92639;
+    background-color: #C92639;
 }
 tr.timeline:hover .cat4 {
-	background-color: #32BF36;
+    background-color: #32BF36;
 }
 tr.timeline:hover .cat5 {
-	background-color: #E5EB3D;
+    background-color: #E5EB3D;
 }
-
-table.calendarCur td.enlarge:hover, table.calendarAlt td.enlarge:hover  {
+table.calendarCur td.enlarge:hover,
+table.calendarAlt td.enlarge:hover {
     animation-name: zoomin;
     z-index: 2;
     font-size: 0.5em;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
 }
-
-table.calendarCur td.enlarge, table.calendarAlt td.enlarge {
+table.calendarCur td.enlarge,
+table.calendarAlt td.enlarge {
     font-size: 1em;
     z-index: 1;
     animation-name: zoomout;
     animation-duration: 0.3s;
 }
-
 @keyframes zoomin {
-    0% {opacity:0.8}
-    100% {transform: scale(2, 2);opacity:1}
+    0% {
+        opacity: 0.8
+    }
+    100% {
+        transform: scale(2, 2);
+        opacity: 1
+    }
 }
-
 @keyframes zoomout {
-    0% {transform: scale(2, 2);opacity:1}
-    100% {transform: scale(1, 1);opacity:0.8}
+    0% {
+        transform: scale(2, 2);
+        opacity: 1
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 0.8
+    }
 }
-
 div.latofont {
     font: 300 100%/1.5em 'Lato', sans-serif;
 }
-
 table.calendarCur td {
     padding: 2vh;
     border-radius: 50%;
     text-align: center;
     font: 300 100%/1.2em 'Lato', sans-serif;
 }
-
 table.calendarAlt td {
     padding: 2vh;
     border-radius: 50%;
     text-align: center;
     font: 300 100%/1.2em 'Lato', sans-serif;
 }
-
 table.calendarCur td.cat1 {
-	background-color: #3C93B0;
-    opacity:0.8;
+    background-color: #3C93B0;
+    opacity: 0.8;
 }
-
 table.calendarCur td.cat2 {
-	background-color: #833CB0; 
-    opacity:0.8;
+    background-color: #833CB0;
+    opacity: 0.8;
 }
-
 table.calendarCur td.cat3 {
- 	background-color: #C92639;   
-    opacity:0.8;
+    background-color: #C92639;
+    opacity: 0.8;
 }
-
 table.calendarCur td.cat4 {
-	background-color: #32BF36; 
-    opacity:0.8;
+    background-color: #32BF36;
+    opacity: 0.8;
 }
-
 table.calendarCur td.cat5 {
-  	background-color: #E5EB3D;  
-    opacity:0.8;
+    background-color: #E5EB3D;
+    opacity: 0.8;
 }
-
 table.calendarAlt td.cat1 {
-	background-color: #3C93B0;   
-    opacity:0.8;
+    background-color: #3C93B0;
+    opacity: 0.8;
 }
-
 table.calendarAlt td.cat2 {
-	background-color: #833CB0;   
-    opacity:0.8;
+    background-color: #833CB0;
+    opacity: 0.8;
 }
-
 table.calendarAlt td.cat3 {
- 	background-color: #C92639;   
-    opacity:0.8;
+    background-color: #C92639;
+    opacity: 0.8;
 }
-
 table.calendarAlt td.cat4 {
-	background-color: #32BF36; 
-    opacity:0.8;
+    background-color: #32BF36;
+    opacity: 0.8;
 }
-
 table.calendarAlt td.cat5 {
-  	background-color: #E5EB3D;  
-    opacity:0.8;
+    background-color: #E5EB3D;
+    opacity: 0.8;
 }
-
 table.calendarCur {
     height: 50%;
 }
-
 table.calendarAlt {
     height: 50%;
 }

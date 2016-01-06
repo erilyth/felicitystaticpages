@@ -8,20 +8,19 @@ function test() {
     var overlap = (rect1.bottom - rect2.top) > 10;
 
     if (overlap == true) {
-        rectelem2.style.visibility="hidden";
-    }
-    else if (overlap == false) {
-        rectelem2.style.visibility="visible";
+        rectelem2.style.visibility = "hidden";
+    } else if (overlap == false) {
+        rectelem2.style.visibility = "visible";
     }
 }
 
-setInterval(test,100);
+setInterval(test, 100);
 
-function hoverDate(text,element) {
+function hoverDate(text, element) {
     element.innerHTML = text;
     element.style.padding = 0;
 }
 
-function hoverOutDate(text,element) {
+function hoverOutDate(text, element) {
     element.innerHTML = text;
 }
