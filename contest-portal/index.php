@@ -45,19 +45,27 @@
                 document.getElementById('displayContent').innerHTML=output;
             }
             function scoreboard() {
-                var view = {
-                    data : "Scoreboard :)"  
-                };
-                var template = document.getElementById('scoreboardTemplate').innerHTML;
-                var output = Mustache.render(template, view);
-                document.getElementById('displayContent').innerHTML=output;
+                var userList = [{name:'user 1',score:'score 1'},{name:'user 2',score:'score 2'}];
+                document.getElementById('displayContent').innerHTML="";
+                    for(var i=0;i<userList.length;i++){
+                    var view = {
+                        name : userList[i].name,
+                        score : userList[i].score
+                    };
+                    var template = document.getElementById('scoreboardTemplate').innerHTML;
+                    var output = Mustache.render(template, view);
+                    document.getElementById('displayContent').innerHTML+=output+"<hr />";
+                }
             }
             function problems() {
-                var problems = [{name:'prob 1',level:'level 1'},{name:'prob 2', level:'level 2'}];
+                var problems = [{id:1,name:'prob 1',level:'level 1'},{id:2,name:'prob 2', level:'level 2'}];
                 document.getElementById('displayContent').innerHTML="";
                 for(var i=0;i<problems.length;i++){
                     var view = {
-                        data : problems[i].name
+                        id : problems[i].id,
+                        link : "./problem/"+problems[i].id,
+                        name : problems[i].name,
+                        level : problems[i].level
                     }
                     var template = document.getElementById('problemsViewTemplate').innerHTML;
                     var output = Mustache.render(template, view);
@@ -72,7 +80,8 @@
             function loadproblem(problem_no){
                 var view = {
                     name : "Problem 1",
-                    problemNo : problem_no
+                    id : problem_no,
+                    level : 1
                 };
                 var template = document.getElementById('problemTemplate').innerHTML;
                 var output = Mustache.render(template, view);
@@ -80,16 +89,16 @@
             }
         </script>
         <script type="text/plain" id="welcomeTemplate">
-            {{message}} 
+            {{message}}
         </script>
         <script type="text/plain" id="scoreboardTemplate">
-            {{data}}
+            {{name}} scored {{score}}
         </script>
         <script type="text/plain" id="problemsViewTemplate">
-            {{data}}
+            <a href={{link}}>{{id}} problem name is {{name}} and level is {{level}}</a>
         </script>
         <script type="text/plain" id="problemTemplate">
-            {{name}} hi {{problemNo}}
+            {{name}} hi {{id}} and {{level}}
         </script>
         
     </body>
