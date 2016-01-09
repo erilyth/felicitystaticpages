@@ -4,6 +4,7 @@
         <title>Basic</title>
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>    
         <script src="https://raw.githubusercontent.com/janl/mustache.js/master/mustache.js"></script>     
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>     
         <base href="/contestportal/" >
         <script></script>
     </head>
