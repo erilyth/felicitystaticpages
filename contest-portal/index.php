@@ -9,11 +9,6 @@
     </script>
   </head>
   <body>
-    <?php
-        $html = '';
-        $html .= '<input id="url" style="display:none" value="' . explode('/',$_SERVER['REQUEST_URI'])[3] . '"/>';
-        echo $html;
-    ?>
     <h1>Basic</h1>
     <p></p>
     <div id='person'></div>
