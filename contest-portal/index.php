@@ -40,13 +40,13 @@
               document.getElementById('problem').style.display="none";
               document.getElementById('problems').style.display="none";
               document.querySelector('p')
-                .textContent = 'viewing index';
+                .textContent = 'Index';
             }
             function scoreboard() {
               document.getElementById('problem').style.display="none";
               document.getElementById('problems').style.display="none";
               document.querySelector('p')
-                .textContent = 'viewing scoreboard';
+                .textContent = 'Scoreboard';
             }
             function problems() {
               document.getElementById('problem').style.display="none";
@@ -55,17 +55,18 @@
             
             function problem(ctx) {
               document.getElementById('problems').style.display="none";
-              loadtemp();
+              loadproblem(2);
             }
-              function loadtemp(){
-                  var view = {
-                      name : "Problem 1",
-                      problemNo : "1"
-                  };
-                  var output = Mustache.render("Problem {{problemNo}} is {{name}}", view);
-                  document.getElementById('problem').style.display="block";
-                  document.getElementById('problem').innerHTML = output;
-              }
+            
+            function loadproblem(problemNo){
+                var view = {
+                    name : "Problem 1",
+                    problemNo : problemNo
+                };
+                var output = Mustache.render("Problem {{problemNo}} is {{name}}", view);
+                document.getElementById('problem').style.display="block";
+                document.getElementById('problem').innerHTML = output;
+            }
         </script>
     </body>
 </html>
