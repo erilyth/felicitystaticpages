@@ -53,12 +53,16 @@
                 document.getElementById('displayContent').innerHTML=output;
             }
             function problems() {
-                var view = {
-                    data : "Problems"
+                var problems = [{name:'prob 1',level:'level 1'},{name:'prob 2', level:'level 2'}];
+                document.getElementById('displayContent').innerHTML="";
+                for(var i=0;i<problems.length;i++){
+                    var view = {
+                        data : problems[i].name
+                    }
+                    var template = document.getElementById('problemsViewTemplate').innerHTML;
+                    var output = Mustache.render(template, view);
+                    document.getElementById('displayContent').innerHTML+=output+"<hr />";
                 }
-                var template = document.getElementById('problemsViewTemplate').innerHTML;
-                var output = Mustache.render(template, view);
-                document.getElementById('displayContent').innerHTML=output;
             }
             
             function problem(ctx) {
