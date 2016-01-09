@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteBase /contestportal/
+RewriteBase /felicity-static/contest-portal/
 
-RewriteCond $1 !^(index\.php|static|favicon\.ico|robots\.txt|humans\.txt)
-RewriteRule ^(.*)$ index.php [L] 
+RewriteCond $1 !^(index\.html|static|favicon\.ico|robots\.txt|humans\.txt)
+RewriteRule ^(.*)$ index.html [L] 
