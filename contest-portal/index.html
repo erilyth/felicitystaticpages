@@ -42,16 +42,19 @@
       page('/problem/:problemNo', problem);
       page();
       function index() {
+        document.getElementById('problem').style.display="none";
         document.getElementById('problems').style.display="none";
         document.querySelector('p')
           .textContent = 'viewing index';
       }
       function scoreboard() {
+        document.getElementById('problem').style.display="none";
         document.getElementById('problems').style.display="none";
         document.querySelector('p')
           .textContent = 'viewing scoreboard';
       }
       function problems() {
+        document.getElementById('problem').style.display="none";
         document.getElementById('problems').style.display="block";
       }
    
@@ -65,6 +68,7 @@
                 problemNo : "1"
             };
             var output = Mustache.render("Problem {{problemNo}} is {{name}}", view);
+            document.getElementById('problem').style.display="block";
             document.getElementById('problem').innerHTML = output;
         }
     </script>
