@@ -74,7 +74,7 @@
             }
             
             function problem(ctx) {
-              loadproblem(2);
+                loadproblem(ctx.params.problemNo || '');
             }
             
             function loadproblem(problem_no){
