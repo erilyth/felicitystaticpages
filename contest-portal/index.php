@@ -21,7 +21,7 @@
             <a href="./problem/1">Problem 1</a>
             <a href="./problem/2">Problem 2</a>
         </div>
-        <div id="problem">
+        <div id="displayContent">
         </div>
         <script>
             // the "notfound" implements a catch-all
@@ -37,37 +37,56 @@
             page('/problem/:problemNo', problem);
             page();
             function index() {
-              document.getElementById('problem').style.display="none";
-              document.getElementById('problems').style.display="none";
-              document.querySelector('p')
-                .textContent = 'Index';
+                var view = {
+                    message : "Welcome!"
+                };
+                var template = document.getElementById('welcomeTemplate').innerHTML;
+                var output = Mustache.render(template, view);
+                document.getElementById('displayContent').innerHTML=output;
             }
             function scoreboard() {
-              document.getElementById('problem').style.display="none";
-              document.getElementById('problems').style.display="none";
-              document.querySelector('p')
-                .textContent = 'Scoreboard';
+                var view = {
+                    data : "Scoreboard :)"  
+                };
+                var template = document.getElementById('scoreboardTemplate').innerHTML;
+                var output = Mustache.render(template, view);
+                document.getElementById('displayContent').innerHTML=output;
             }
             function problems() {
-              document.getElementById('problem').style.display="none";
-              document.getElementById('problems').style.display="block";
+                var view = {
+                    data : "Problems"
+                }
+                var template = document.getElementById('problemsViewTemplate').innerHTML;
+                var output = Mustache.render(template, view);
+                document.getElementById('displayContent').innerHTML=output;
             }
             
             function problem(ctx) {
-              document.getElementById('problems').style.display="none";
               loadproblem(2);
             }
             
-            function loadproblem(problemNo){
+            function loadproblem(problem_no){
                 var view = {
                     name : "Problem 1",
-                    problemNo : problemNo
+                    problemNo : problem_no
                 };
-                var output = Mustache.render("Problem {{problemNo}} is {{name}}", view);
-                document.getElementById('problem').style.display="block";
-                document.getElementById('problem').innerHTML = output;
+                var template = document.getElementById('problemTemplate').innerHTML;
+                var output = Mustache.render(template, view);
+                document.getElementById('displayContent').innerHTML=output;
             }
         </script>
+        <script type="text/plain" id="welcomeTemplate">
+            {{message}} 
+        </script>
+        <script type="text/plain" id="scoreboardTemplate">
+            {{data}}
+        </script>
+        <script type="text/plain" id="problemsViewTemplate">
+            {{data}}
+        </script>
+        <script type="text/plain" id="problemTemplate">
+            {{name}} hi {{problemNo}}
+        </script>
+        
     </body>
 </html>
-
