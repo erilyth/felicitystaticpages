@@ -5,22 +5,16 @@
         <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>    
         <script src="https://raw.githubusercontent.com/janl/mustache.js/master/mustache.js"></script>     
         <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>     
-        <base href="/contestportal/" >
-        <script></script>
+        <base href="/portal/">
     </head>
     <body>
         <h1>Basic</h1>
         <p></p>
-        <div id='person'></div>
         <ul>
             <li><a href="./">Home</a></li>
             <li><a href="./scoreboard">Scoreboard</a></li>
             <li><a href="./problems">Problems</a></li>
         </ul>
-        <div id="problems" style="display:none">
-            <a href="./problem/1">Problem 1</a>
-            <a href="./problem/2">Problem 2</a>
-        </div>
         <div id="displayContent">
         </div>
         <script>
@@ -30,12 +24,19 @@
             // to the location of paths which do not
             // match any of the following routes
             //
-            page.base('/contestportal');
+            page.base('/portal');
             page('/', index);
             page('/scoreboard', scoreboard);
             page('/problems', problems);
             page('/problem/:problemNo', problem);
             page();
+
+            function locationHashChanged() {
+                page(location.hash);
+            }
+
+            window.onhashchange = locationHashChanged;
+
             function index() {
                 var view = {
                     message : "Welcome!"
@@ -45,12 +46,21 @@
                 document.getElementById('displayContent').innerHTML=output;
             }
             function scoreboard() {
-                var userList = [{name:'user 1',score:'score 1'},{name:'user 2',score:'score 2'}];
+                var obj;
+                /*$.ajax({
+                        type: 'GET',
+                        url: 'http://10.42.0.59/con/api/problems/?format=json',
+                        dataType: 'json'
+                    }).done(function(data) {
+                        obj=data;
+                        console.log('hi');
+            });*/
+                obj={"user_nick":"feli","problem_data":[{"question_list":[{"status":"Not Attempted","question_title":"1->1","question_number":1}],"question_level":1}]};
                 document.getElementById('displayContent').innerHTML="";
-                    for(var i=0;i<userList.length;i++){
+                for(var i=0;i<obj.length;i++){
                     var view = {
-                        name : userList[i].name,
-                        score : userList[i].score
+                        name : obj[i]['user_nick'],
+                        score : obj[i]['user_score']
                     };
                     var template = document.getElementById('scoreboardTemplate').innerHTML;
                     var output = Mustache.render(template, view);
@@ -58,18 +68,31 @@
                 }
             }
             function problems() {
-                var problems = [{id:1,name:'prob 1',level:'level 1'},{id:2,name:'prob 2', level:'level 2'}];
+                var obj;
+                /*$.ajax({
+                        type: 'GET',
+                        url: 'http://10.42.0.59/con/api/problems/?format=json',
+                        dataType: 'json'
+                    }).done(function(data) {
+                        obj=data;
+            });*/
+                obj={"user_nick":"feli","problem_data":[{"question_list":[{"status":"Not Attempted","question_title":"1->1","question_number":1}],"question_level":1}]};
+                var data = obj['problem_data'];
                 document.getElementById('displayContent').innerHTML="";
-                for(var i=0;i<problems.length;i++){
-                    var view = {
-                        id : problems[i].id,
-                        link : "./problem/"+problems[i].id,
-                        name : problems[i].name,
-                        level : problems[i].level
+                for(var j=0;j<data.length;j++){
+                    var problems = data[j]['question_list'];
+                    for(var i=0;i<problems.length;i++){
+                        var view = {
+                            question_status : problems[i]['status'],
+                            title : problems[i]['question_title'],
+                            question_number : problems[i]['question_number'],
+                            link : "./problem/"+data[j]['question_level']+"/"+problems[i]['question_number'],
+                            level : data[j]['question_level']
+                        }
+                        var template = document.getElementById('problemsViewTemplate').innerHTML;
+                        var output = Mustache.render(template, view);
+                        document.getElementById('displayContent').innerHTML+=output+"<hr />";
                     }
-                    var template = document.getElementById('problemsViewTemplate').innerHTML;
-                    var output = Mustache.render(template, view);
-                    document.getElementById('displayContent').innerHTML+=output+"<hr />";
                 }
             }
             
@@ -78,10 +101,22 @@
             }
             
             function loadproblem(problem_no){
+                var obj;
+                /*$.ajax({
+                        type: 'GET',
+                        url: 'http://10.42.0.59/con/api/problems/?format=json',
+                        dataType: 'json'
+                    }).done(function(data) {
+                        obj=data;
+            });*/
+                obj={"user_nick":"feli","question_comments":[],"question_data":{"question_level":1,"question_number":1,"question_title":"1->1","question_desc":"asasas","question_image":null}};
+                var data = obj['question_data'];
                 var view = {
-                    name : "Problem 1",
-                    id : problem_no,
-                    level : 1
+                    title : data['question_title'],
+                    id : data['question_number'],
+                    level : data['question_level'],
+                    description : data['question_desc'],
+                    image : data['question_image']
                 };
                 var template = document.getElementById('problemTemplate').innerHTML;
                 var output = Mustache.render(template, view);
@@ -95,10 +130,10 @@
             {{name}} scored {{score}}
         </script>
         <script type="text/plain" id="problemsViewTemplate">
-            <a href={{link}}>{{id}} problem name is {{name}} and level is {{level}}</a>
+            <a href={{link}}>{{title}} yaya {{level}}</a>
         </script>
         <script type="text/plain" id="problemTemplate">
-            {{name}} hi {{id}} and {{level}}
+            {{title}} hi {{level}} and {{description}}
         </script>
         
     </body>

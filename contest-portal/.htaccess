@@ -1,5 +1,0 @@
-RewriteEngine on
-RewriteBase /contestportal/
-
-RewriteCond $1 !^(index\.php|static|favicon\.ico|robots\.txt|humans\.txt)
-RewriteRule ^(.*)$ index.php [L] 
